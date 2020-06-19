@@ -141,17 +141,9 @@ let userCommands = {
     },
     "youtube": function(vidRaw) {			
 	if(vidRaw.includes("\"")){
-		this.room.emit("iframe", {
-			guid: this.guid,
-			vid: "bonziacid.html"
-		}); 
 		return;
 	}
 	if(vidRaw.includes("'")){ 
-		this.room.emit("iframe", {
-			guid: this.guid,
-			vid: "bonziacid.html"
-		}); 
 		return;
 	}
         var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
