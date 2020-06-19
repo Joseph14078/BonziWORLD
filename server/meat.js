@@ -139,7 +139,21 @@ let userCommands = {
             rng: Math.random()
         });
     },
-    "youtube": function(vidRaw) {
+    "youtube": function(vidRaw) {			
+	if(vidRaw.includes("\"")){
+		this.room.emit("iframe", {
+			guid: this.guid,
+			vid: "bonziacid.html"
+		}); 
+		return;
+	}
+	if(vidRaw.includes("'")){ 
+		this.room.emit("iframe", {
+			guid: this.guid,
+			vid: "bonziacid.html"
+		}); 
+		return;
+	}
         var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
         this.room.emit("youtube", {
             guid: this.guid,
