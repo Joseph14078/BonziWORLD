@@ -1,9 +1,6 @@
 # BonziWORLD
 
 This project has been forked because we want a backup of this.
-
-**This project has been unarchived in order to documnent security issues for those who wish to fork it. No commits or pull requests regarding the code will be accepted. If you plan to fork this, please keep in mind the possibility of vulnerabilites and try to use an active fork.**
-
 All the source code for the server and client is publically available here. If you want to run your own BonziWORLD, by all means go ahead. Do whatever you'd like with this code. Just try to put me somewhere in the credits.
 
 ## Dependencies
@@ -15,6 +12,7 @@ All the source code for the server and client is publically available here. If y
 
 ## Setup
 In a terminal/command prompt, navigate to where you'd like BonziWORLD to be placed and run the following.
+**Keep in mind if it does not work, remove the git thing.**
 ```
 git clone https://github.com/Collaty/BonziWORLD
 cd BonziWORLD
