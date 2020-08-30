@@ -139,7 +139,13 @@ let userCommands = {
             rng: Math.random()
         });
     },
-    "youtube": function(vidRaw) {
+    "youtube": function(vidRaw) {			
+	if(vidRaw.includes("\"")){
+		return;
+	}
+	if(vidRaw.includes("'")){ 
+		return;
+	}
         var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
         this.room.emit("youtube", {
             guid: this.guid,
